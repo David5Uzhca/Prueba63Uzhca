@@ -1,0 +1,123 @@
+// Estilo general para toda la página
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    margin: 20px;
+  }
+  
+  h1 {
+    color: #007bff;
+  }
+  
+  form {
+    margin-bottom: 20px;
+  
+    table {
+      border-collapse: collapse;
+      width: 100%;
+  
+      td {
+        padding: 10px;
+      }
+  
+      input {
+        width: 100%;
+        padding: 8px;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+      }
+  
+      button {
+        background-color: #28a745;
+        color: #fff;
+        padding: 10px 15px;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        margin-right: 10px;
+  
+        &:hover {
+          background-color: #218838;
+        }
+      }
+    }
+  }
+  
+  hr {
+    border: 1px solid #ddd;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+  
+    th {
+      background-color: #007bff;
+      color: #fff;
+    }
+  
+    td {
+      button {
+        background-color: #dc3545;
+        color: #fff;
+        padding: 8px;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+  
+        &:hover {
+          background-color: #c82333;
+        }
+      }
+    }
+  }
+  // tu-archivo-estilos.scss
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 15px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+
+  &:hover {
+    background-color: #0056b3;
+  }
+}
+
+// Estilo específico para el botón "Guardar"
+button[aria-label="Guardar"] {
+  background-color: #28a745;
+
+  &:hover {
+    background-color: #218838;
+  }
+}
+
+// Estilo específico para el botón "Actualizar"
+button[aria-label="Actualizar"] {
+  background-color: #ffc107;
+
+  &:hover {
+    background-color: #d39e00;
+  }
+}
+
+// Estilo específico para los botones de búsqueda
+button[aria-label^="Buscar"] {
+  background-color: #6c757d;
+
+  &:hover {
+    background-color: #5a6268;
+  }
+}

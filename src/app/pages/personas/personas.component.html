@@ -1,0 +1,58 @@
+
+<h1>Clientes</h1>
+
+<form>
+    <table>
+        <tr>
+            <td>Código</td>
+            <td><input type="number" name="txtCodigo" id="txtCodigo" [(ngModel)]="person.codigo"></td>
+        </tr>
+        <tr>
+            <td>Nombre</td>
+            <td><input type="text" name="txtNombre" id="txtNombre" [(ngModel)]="person.nombre"></td>
+        </tr>
+        <tr>
+            <td>DNI</td>
+            <td><input type="text" name="txtDNI" id="txtDNI" [(ngModel)]="person.dni"></td>
+        </tr>
+        <tr>
+            <td>Mes</td>
+            <td><input type="text" name="txtMes" id="txtMes" [(ngModel)]="person.mes"></td>
+        </tr>
+        <tr>
+            <td>Deuda</td>
+            <td><input type="text" name="txtDeuda" id="txtDeuda" [(ngModel)]="person.deuda"></td>
+        </tr>
+        <tr>
+            <td>DNI a buscar</td>
+            <td><input type="text" name="txtBuscarDNI" [(ngModel)]="dniABuscar"></td>
+          </tr>
+    </table>
+    <button (click)="guardar()">Guardar</button>
+    <button (click)="actualizar()">Actualizar</button>
+    <button (click)="buscarPorDNI(dniABuscar)">Buscar</button>
+
+</form>
+
+<hr/>
+
+<table>
+    <tr>
+        <th>Código</th>
+        <th>DNI</th>
+        <th>Nombre</th>
+        <th>Mes</th>
+        <th>Deuda</th>
+    </tr>
+    <tr *ngFor="let cli of personas | async">
+        <td>{{cli.codigo}}</td>
+        <td>{{cli.dni}}</td>
+        <td>{{cli.nombre}}</td>
+        <td>{{cli.mes}}</td>
+        <td>{{cli.deuda}}</td>
+        <td>
+            <button (click)="eliminarPersona(cli.codigo)">Eliminar</button>
+        </td>
+    </tr>
+
+</table>
